@@ -7,10 +7,10 @@ function main() {
 
     const alumnos = instanceStudents(); // Arreglo de alumnos instanciados.
 
-    var acumulador = 0;
-    var stop = false
-    var cant = 0;
-    var resultOperation = false;
+    let acumulador = 0;
+    let stop = false
+    let cant = 0;
+    let resultOperation = false;
 
     //Calcular Promedio de todos los alumnos.
     alumnos.map((alumno) => {
@@ -43,7 +43,7 @@ function main() {
     })
 
     //Listar Alumnos.
-    var result = ''
+    let result = ''
 
     alumnos.map((alumno) => {
         result = result + `${alumno.nombre} Promedio: ${alumno.promedio} \n` //Mostrar los promedios
@@ -52,7 +52,7 @@ function main() {
     alert(result)
 
     //Calcular el maximo promedio    
-    var maxProm = Math.max.apply(Math, alumnos.map(alumno => alumno.promedio));
+    let maxProm = Math.max.apply(Math, alumnos.map(alumno => alumno.promedio));
 
     const alumnMaxProm = alumnos.filter(alumno => alumno.promedio === maxProm);
 
@@ -73,7 +73,7 @@ function validateNumber(input) {
 
 function instanceStudents() {
     const alumnos = [];
-    var i = 0;
+    let i = 0;
     for (i; i < 5; i++) {
         let alumno = new Persona(`Alumno ${i}`);
         alumnos.push(alumno)
